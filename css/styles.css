@@ -23,14 +23,16 @@
 
 .back-img { background-image: url("../img/back-img.jpg");
             widows: 100%;
-            height: 700px;            
+            height: 500px;            
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
             position: relative;
-            opacity: 0.8; }
+            opacity: 0.5; }
 
 .back-img:hover { opacity: 1.0; }
+
+.img-text:hover { opacity: 1.0; }
 
 .img-text { position: absolute;
             top: 50%;
@@ -38,6 +40,7 @@
             transform:translate(-50%,-50%);
             color: red;
             font-size: 50px;
+            opacity: 0.5;
             text-shadow: 10px 20px 3px red, 15px 30px 5px blue; }
 
 .boder-text { position: absolute;
@@ -47,3 +50,41 @@
               color: aqua;
               border: 5px solid red;
               border-radius: 10px 20px 30px 40px; }
+
+.big-box { width: 500px;
+           height: 500px;
+           background-color: black;
+           position: relative;
+          /* transition-property: all;
+           transition-duration: 5s;
+           transition-timing-function: linear;
+           transition-delay: 2s;*/
+           transition: all 5s linear 2s; }
+
+.mini-box { width: 200px;
+            height: 200px;
+            background-color: red;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%) rotate(45deg) scale(0.5,1.5);
+            animation: mymove 50s infinite; }
+
+.big-box:hover { background-color: aqua; }
+
+.big-box:hover .mini-box { background-color: yellow; }
+
+@keyframes mymove {
+  0%   {top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(0deg);  background: red;}
+  10%  {top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(36deg);  background: blue;}
+  20%  {top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(72deg); background: yellow;}
+  30%  {top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(108deg); background: green;}
+  40%  {top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(144deg); background: aqua;}
+  50%  {top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(180deg); background: red;}
+  60%  {top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(216deg); background: blue;}
+  70%  {top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(252deg); background: yellow;}
+  80%  {top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(288deg); background: green;}
+  90%  {top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(324deg); background: aqua;}
+  100%  {top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(360deg); background: red;}
+
+
